@@ -36,7 +36,6 @@ class StaffMemberManagement {
             System.out.println("--------------------------------------");
             System.out.print("-> Choose an option(): ");
 
-//            int option = scanner.nextInt();
             int option = Integer.parseInt(scanner.nextLine().trim());
 
             switch (option){
@@ -248,9 +247,9 @@ class StaffMemberManagement {
                 System.out.println("\nChoose one coloumn to update:");
                 System.out.println("1. Name");
                 System.out.println("2. Address");
-                System.out.println("3. Salary (if applicable)");
-                System.out.println("4. Bonus (if applicable)");
-                System.out.println("5. Hours & Rate (if applicable)");
+                System.out.println("3. Salary");
+                System.out.println("4. Bonus");
+                System.out.println("5. Hours & Rate");
                 System.out.println("6. Cancel");
                 System.out.print("=> Choose an option: ");
 
@@ -270,11 +269,11 @@ class StaffMemberManagement {
                         break;
                     case 3:
                         if (emp instanceof SalaryEmployee) {
-                            System.out.print("Enter new Salary: ");
+                            System.out.print("Change Salary To: ");
                             ((SalaryEmployee) emp).setSalary(scanner.nextDouble());
                             System.out.println("Salary updated successfully!");
                         } else if (emp instanceof Volunteer) {
-                            System.out.print("Enter new Salary: ");
+                            System.out.print("Change Salary To: ");
                             ((Volunteer) emp).setSalary(scanner.nextDouble());
                             System.out.println("Salary updated successfully!");
                         } else {
@@ -283,7 +282,7 @@ class StaffMemberManagement {
                         break;
                     case 4:
                         if (emp instanceof SalaryEmployee) {
-                            System.out.print("Enter new Bonus: ");
+                            System.out.print("Change Bonus To: ");
                             ((SalaryEmployee) emp).setBunus(scanner.nextDouble());
                             System.out.println("Bonus updated successfully!");
                         } else {
